@@ -1,0 +1,643 @@
+
+/* General
+ * ------------------------------------------------------------------- */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 11px;
+	color: black;
+	background: white url(bg-body.jpg) 10px -20px no-repeat;
+}
+
+a {
+	border: none;
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+
+/* Header and Form Controls
+ * ------------------------------------------------------------------- */
+
+div#header {
+	position: relative;
+	margin: 0 20px;
+	width: 1250px;
+	height: 130px;  /* 143px for background image */
+	background: url(header-controls.png) no-repeat;
+}
+
+#class-selector-primary {
+	position: absolute;
+	left: 595px;
+	top: 60px;
+	width: 90px;
+}
+
+#class-selector-secondary {
+	position: absolute;
+	left: 595px;
+	top: 95px;
+	width: 90px;
+}
+
+#available-label {
+	position: absolute;
+	left: 735px;
+	top: 95px;
+	width: 60px;
+	height: 25px;
+	background: url(available-labels.png) no-repeat;
+}
+
+#available-label.negative { background-position: 0px -25px; }
+
+.form-textbox {
+	position: absolute;
+	border: 1px solid rgb(157, 157, 157);
+	padding: 3px;
+	width: 25px;
+	font-size: 11px;
+	text-align: center;
+	color: black;
+	background-color: white;
+}
+
+#points-total     { left: 800px; top: 65px; border: 1px solid rgb(204, 204, 204); }
+#points-available { left: 800px; top: 95px; border: 1px solid rgb(204, 204, 204); }
+#level            { left: 935px; top: 65px; }
+#level-cap        { left: 935px; top: 95px; position: absolute; width: 50px; }
+#retired          { left: 1060px; top: 65px; position: absolute; margin: 5px 0 0 8px; }
+#retire-level     { left: 1060px; top: 95px; }
+
+#points-available.negative { font-weight: bold; color: red; background-color: rgb(255, 225, 225); }
+#retire-level.disabled { border: 1px solid rgb(204, 204, 204); background-color: rgb(240, 240, 240); }
+
+.button {
+	position: absolute;
+	width: 92px;
+	height: 44px;
+	cursor: pointer;
+	background: url(buttons.png) no-repeat;
+}
+
+#language-button.jp        { left: 1215px; top: 25px; background-position: -184px 0px; }
+#language-button.jp:hover  { left: 1215px; top: 25px; background-position: -184px -44px; }
+#language-button.jp:active { left: 1215px; top: 25px; background-position: -184px -88px; }
+#language-button.en        { left: 1215px; top: 25px; background-position: -276px 0px; }
+#language-button.en:hover  { left: 1215px; top: 25px; background-position: -276px -44px; }
+#language-button.en:active { left: 1215px; top: 25px; background-position: -276px -88px; }
+
+#export-button        { left: 1215px; top: 75px; background-position: 0px 0px; }
+#export-button:hover  { left: 1215px; top: 75px; background-position: 0px -44px; }
+#export-button:active { left: 1215px; top: 75px; background-position: 0px -88px; }
+#help-button          { left: 1115px; top: 25px; background-position: -92px 0px; }
+#help-button:hover    { left: 1115px; top: 25px; background-position: -92px -44px; }
+#help-button:active   { left: 1115px; top: 25px; background-position: -92px -88px; }
+#clear-button         { left: 1115px; top: 75px; background-position: -368px 0px; }
+#clear-button:hover   { left: 1115px; top: 75px; background-position: -368px -44px; }
+#clear-button:active  { left: 1115px; top: 75px; background-position: -368px -88px; }
+
+#theme-selector {
+	position: absolute;
+	left: 1130px;
+	top: 120px;
+}
+
+
+/* Skill Tree
+ * ------------------------------------------------------------------- */
+
+div#main {
+	position: relative;
+	margin: 10px 30px 30px;
+	width: 1356px;
+	height: 620px;
+}
+
+div#bg-main {
+	background: url(bg-main.png) no-repeat;
+}
+
+div.tree {
+	position: absolute;
+}
+
+div#tree-fixed {
+	left: 0;
+	top: 0;
+	width: 150px;
+	height: 620px;
+}
+
+div#tree-primary {
+	left: 150px;
+	top: 0;
+	width: 603px;
+	height: 620px;
+}
+
+div#tree-secondary {
+	left: 753px;
+	top: 0;
+	width: 603px;
+	height: 620px;
+}
+
+div.tree-bg-primary,
+div.tree-bg-secondary,
+div.arrows {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*
+div.tree-bg-primary   { background: url(bg-primary.png) no-repeat; }
+div.tree-bg-secondary { background: url(bg-secondary.png) no-repeat; }
+*/
+
+div.arrows           { background: url(arrows.png) no-repeat; }
+div.arrows-prince    { background-position: 0px 0px; }
+div.arrows-gladiator { background-position: 0px -620px; }
+div.arrows-hoplite   { background-position: 0px -1240px; }
+div.arrows-buccaneer { background-position: 0px -1860px; }
+div.arrows-ninja     { background-position: 0px -2480px; }
+div.arrows-monk      { background-position: 0px -3100px; }
+div.arrows-zodiac    { background-position: 0px -3720px; }
+div.arrows-wildling  { background-position: 0px -4340px; }
+div.arrows-arbalist  { background-position: 0px -4960px; }
+div.arrows-farmer    { background-position: 0px -5580px; }
+div.arrows-shogun    { background-position: 0px -6200px; }
+div.arrows-yggdroid  { background-position: 0px -6820px; }
+div.arrows-landsknecht  { background-position: 0px -7440px; }
+div.arrows-runemaster  { background-position: 0px -8060px; }
+div.arrows-nightseeker  { background-position: 0px -8680px; }
+div.arrows-fortress  { background-position: 0px -9300px; }
+div.arrows-bushi  { background-position: 0px -9920px; }
+div.arrows-dancer  { background-position: 0px -10540px; }
+div.arrows-sniper  { background-position: 0px -11160px; }
+div.arrows-medic  { background-position: 0px -11780px; }
+div.arrows-arcanist  { background-position: 0px -12400px; }
+div.arrows-imperial  { background-position: 0px -13020px; }
+
+
+/* Individual Skills
+ * ------------------------------------------------------------------- */
+
+div.skill {
+	position: absolute;
+	margin: 0 0 0 -1px;
+	padding: 0 9px 8px 1px;
+	width: 88px;
+	height: 59px;
+	/* text-align: center; */
+}
+
+div.skill                       { background: url(bg-skills.png) no-repeat; }
+div.skill-fixed                 { background-position: 0px 0px; }
+div.skill-primary-available     { background-position: 0px 0px; }
+div.skill-primary-unavailable   { background-position: 0px -67px; }
+div.skill-secondary-available   { background-position: 0px -134px; }
+div.skill-secondary-unavailable { background-position: 0px -201px; }
+
+div#skill-unique {
+	position: absolute;
+	left: 0;
+	top: 560px;
+}
+
+div.skill-name {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	padding: 3px 7px 0;
+	width: 88px;
+	height: 27px;
+	cursor: help;
+}
+div.skill-name-en {
+	font-weight: bold;
+}
+
+div.skill-level {
+	position: absolute;
+	top: 32px;
+	padding: 0 0 0 28px; /* margin-right supposed to be 10px but IE7 will flow level nodes in this area */
+	width: 55px;
+	height: 21px;
+	background-image: url(levels.png);
+	background-repeat: no-repeat;
+}
+
+div.skill-level-max1,
+div.skill-level-max2,
+div.skill-level-max3,
+div.skill-level-max4,
+div.skill-level-max5 {
+	padding-top: 5px;
+	height: 16px;
+}
+
+div.skill-level-1-0   { background-position: 0px 0px; }
+div.skill-level-1-1   { background-position: 0px -21px; }
+div.skill-level-2-0   { background-position: 0px -42px; }
+div.skill-level-2-1   { background-position: 0px -63px; }
+div.skill-level-2-2   { background-position: 0px -84px; }
+div.skill-level-3-0   { background-position: 0px -105px; }
+div.skill-level-3-1   { background-position: 0px -126px; }
+div.skill-level-3-2   { background-position: 0px -147px; }
+div.skill-level-3-3   { background-position: 0px -168px; }
+div.skill-level-4-0   { background-position: 0px -189px; }
+div.skill-level-4-1   { background-position: 0px -210px; }
+div.skill-level-4-2   { background-position: 0px -231px; }
+div.skill-level-4-3   { background-position: 0px -252px; }
+div.skill-level-4-4   { background-position: 0px -273px; }
+div.skill-level-5-0   { background-position: 0px -294px; }
+div.skill-level-5-1   { background-position: 0px -315px; }
+div.skill-level-5-2   { background-position: 0px -336px; }
+div.skill-level-5-3   { background-position: 0px -357px; }
+div.skill-level-5-4   { background-position: 0px -378px; }
+div.skill-level-5-5   { background-position: 0px -399px; }
+div.skill-level-6-0  { background-position: 0px -420px; }
+div.skill-level-6-1  { background-position: 0px -441px; }
+div.skill-level-6-2  { background-position: 0px -462px; }
+div.skill-level-6-3  { background-position: 0px -483px; }
+div.skill-level-6-4  { background-position: 0px -504px; }
+div.skill-level-6-5  { background-position: 0px -525px; }
+div.skill-level-6-6  { background-position: 0px -546px; }
+div.skill-level-7-0  { background-position: 0px -567px; }
+div.skill-level-7-1  { background-position: 0px -588px; }
+div.skill-level-7-2  { background-position: 0px -609px; }
+div.skill-level-7-3  { background-position: 0px -630px; }
+div.skill-level-7-4  { background-position: 0px -651px; }
+div.skill-level-7-5  { background-position: 0px -672px; }
+div.skill-level-7-6  { background-position: 0px -693px; }
+div.skill-level-7-7  { background-position: 0px -714px; }
+div.skill-level-8-0  { background-position: 0px -735px; }
+div.skill-level-8-1  { background-position: 0px -756px; }
+div.skill-level-8-2  { background-position: 0px -777px; }
+div.skill-level-8-3  { background-position: 0px -798px; }
+div.skill-level-8-4  { background-position: 0px -819px; }
+div.skill-level-8-5  { background-position: 0px -840px; }
+div.skill-level-8-6  { background-position: 0px -861px; }
+div.skill-level-8-7  { background-position: 0px -882px; }
+div.skill-level-8-8  { background-position: 0px -903px; }
+div.skill-level-9-0  { background-position: 0px -924px; }
+div.skill-level-9-1  { background-position: 0px -945px; }
+div.skill-level-9-2  { background-position: 0px -966px; }
+div.skill-level-9-3  { background-position: 0px -987px; }
+div.skill-level-9-4  { background-position: 0px -1008px; }
+div.skill-level-9-5  { background-position: 0px -1029px; }
+div.skill-level-9-6  { background-position: 0px -1050px; }
+div.skill-level-9-7  { background-position: 0px -1071px; }
+div.skill-level-9-8  { background-position: 0px -1092px; }
+div.skill-level-9-9  { background-position: 0px -1113px; }
+div.skill-level-10-0  { background-position: 0px -1134px; }
+div.skill-level-10-1  { background-position: 0px -1155px; }
+div.skill-level-10-2  { background-position: 0px -1176px; }
+div.skill-level-10-3  { background-position: 0px -1197px; }
+div.skill-level-10-4  { background-position: 0px -1218px; }
+div.skill-level-10-5  { background-position: 0px -1239px; }
+div.skill-level-10-6  { background-position: 0px -1260px; }
+div.skill-level-10-7  { background-position: 0px -1281px; }
+div.skill-level-10-8  { background-position: 0px -1302px; }
+div.skill-level-10-9  { background-position: 0px -1323px; }
+div.skill-level-10-10 { background-position: 0px -1344px; }
+
+div.skill-level-node {
+	float: left;
+	width: 11px;
+	height: 11px;
+}
+
+
+/* Skill Info Boxes
+ * ------------------------------------------------------------------- */
+
+div.skill-info-layer {
+	z-index: 10;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+}
+
+div.skill-info {
+	display: none;
+	position: absolute;
+	/*
+	z-index: 10;
+	left: 100px;
+	top: -20px;
+	*/
+	padding: 15px;
+	color: white;
+	text-align: left;
+	min-width: 175px;
+	
+	border: 4px solid rgba(0, 0, 0, 0.2);
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.75);
+	/* opacity: .75; */
+	filter: alpha(opacity=75); /* IE lt 8 */
+	-ms-filter: "alpha(opacity=75)"; /* IE 8 */
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+div.skill-info.pinned {
+	background: rgba(0, 0, 0, 0.8);
+	filter: alpha(opacity=80);
+	-ms-filter: "alpha(opacity=80)";
+	cursor: move;
+}
+
+div#skill-info-layer-fixed div.skill-info.pinned {
+	border: 4px solid rgb(104, 104, 104);
+}
+
+div#skill-info-layer-primary div.skill-info.pinned {
+	border: 4px solid rgb(107, 147, 232);
+}
+
+div#skill-info-layer-secondary div.skill-info.pinned {
+	border: 4px solid rgb(159, 130, 195);
+}
+
+div.skill-info-close {
+	display: none;
+	position: absolute;
+	right: -15px;
+	top: -15px;
+	width: 30px;
+	height: 30px;
+	background: url(close.png);
+	cursor: pointer;
+}
+
+div.skill-info-name-jp,
+div.skill-info-name-en {
+	white-space: nowrap;
+}
+
+div.skill-info div.title {
+	float: left;
+	font-weight: bold;
+	width: 40px;
+}
+
+div.skill-info-type.active  { color: rgb(239, 51, 25); }
+div.skill-info-type.passive { color: rgb(104, 161, 46); }
+
+div.skill-info-details {
+	margin: 10px 0;
+}
+
+div.skill-info table.levels td {
+	padding: 0 6px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+div.skill-info tr.current td {
+	color: rgb(255, 204, 60);
+}
+
+
+/* Help Box
+ * ------------------------------------------------------------------- */
+
+div#help {
+	/*
+	position: relative;
+	overflow-x: hidden;
+	*/
+	width: 600px;
+	height: 400px;
+	padding: 0 20px 0 15px;
+	font-size: 12px;
+	overflow: auto;
+}
+
+div#help-bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 349px;
+	height: 329px;
+	background: url(bg-help.jpg) 0px 0px no-repeat;
+	opacity: .15;
+	filter: alpha(opacity=15); /* IE lt 8 */
+	-ms-filter: "alpha(opacity=15)"; /* IE 8 */
+}
+
+div#help h2 {
+	display: none;
+	margin-bottom: 15px;
+}
+
+div#help .subtitle {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+div#help h3 {
+	margin: 20px 0 6px;
+}
+
+div#help p {
+	margin: 10px 0;
+}
+
+div#help ul {
+	margin: 10px 20px;
+	list-style: none;
+}
+
+div#help li a {
+	color: rgb(83, 129, 40);
+}
+
+div#help .help-top-link {
+	float: right;
+	text-decoration: none;
+	color: rgb(104, 161, 46);
+}
+
+div#help-sig {
+	margin: 15px;
+	text-align: right;
+	font-style: italic;
+}
+
+div#help table {
+	margin: 10px 0;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 2px solid black;
+}
+
+div#help td,
+div#help th { border: 1px solid black; padding: 3px; white-space: nowrap; }
+div#help th.main { border-bottom: 2px solid black; }
+
+table#help-bonuses th         { border-bottom: 2px solid black; }
+table#help-bonuses .condition { padding: 3px 30px 3px 3px; }
+table#help-bonuses .points    { padding: 3px 10px; text-align: center; }
+
+table#help-android-shoot span.vertical {
+	display: block;
+	width: 14px;
+    -moz-transform: rotate(-90deg);
+    -moz-transform-origin: 100% 100%;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: 100% 100%;
+    -o-transform: rotate(-90deg);
+    -o-transform-origin:100% 100%;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+table#help-android-shoot td,
+table#help-android-shoot th { padding: 3px 6px; font-size: 11px; text-align: center; }
+table#help-android-shoot th { border: 2px solid black; }
+table#help-android-shoot tr.head td { font-weight: bold; }
+table#help-android-shoot tr.line td { border-bottom: 2px solid black; }
+
+table#help-shinobi-pluralslash td,
+table#help-shinobi-pluralslash th { padding: 3px 4px; font-size: 11px; text-align: center; }
+table#help-shinobi-pluralslash th { border: 2px solid black; }
+table#help-shinobi-pluralslash tr.head td { font-weight: bold; }
+table#help-shinobi-pluralslash tr.line td { border-bottom: 2px solid black; }
+
+
+/* Text Export Controls
+ * ------------------------------------------------------------------- */
+
+a#export-close {
+	display: block;
+	float: right;
+	cursor: pointer;
+}
+
+div#export {
+	width: 310px;
+	height: 510px;
+	overflow: hidden;
+}
+
+textarea#export-data {
+	margin: 4px 0 0 4px;
+	border: 1px solid rgb(204, 204, 204);
+	width: 300px;
+	height: 480px;
+	font-size: 10px;
+	font-family: "Courier", "Courier New", monospace;
+}
+
+div#export-clip {
+	display: block;
+	position: relative;
+	float: left;
+	border-left:   2px solid rgb(205, 205, 205);
+	border-top:    2px solid rgb(205, 205, 205);
+	border-right:  2px solid rgb(105, 105, 105);
+	border-bottom: 2px solid rgb(105, 105, 105);
+	width: 148px;
+	height: 14px;
+	background-color: rgb(225, 225, 225);
+	font-weight: bold;
+	text-align: center;
+}
+
+div#export-clip.down {
+	border-left:   2px solid rgb(105, 105, 105);
+	border-top:    2px solid rgb(105, 105, 105);
+	border-right:  2px solid rgb(225, 225, 225);
+	border-bottom: 2px solid rgb(225, 225, 225);
+	background-color: rgb(205, 205, 205);
+	padding-top: 1px;
+	height: 13px;
+}
+
+div#export-clip-notice {
+	display: none;
+	position: absolute;
+	left: 10px;
+	top: -25px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 3px 15px;
+	color: white;
+	background: rgb(0, 0, 0);
+}
+
+div#export-clip-flash {
+	z-index: 10;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+div#export-controls {
+	padding: 5px 4px 0;
+	height: 18px;
+}
+
+input#export-omit-unused {
+	margin: 3px 0 0 20px;
+}
+
+
+/* Character Attributes/Stats Box
+ * ------------------------------------------------------------------- */
+
+div#stats {
+	/* display: none; */
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: ;
+	padding: 15px;
+	color: white;
+	
+	border: 4px solid rgba(0, 0, 0, 0.2);
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.8);
+	/* opacity: .75; */
+	filter: alpha(opacity=80); /* IE lt 8 */
+	-ms-filter: "alpha(opacity=80)"; /* IE 8 */
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+/* Special/Temporary Rules
+ * ------------------------------------------------------------------- */
+
+/* #skill-Prince-FireArms { background: url(bg-skills.png) 0px -134px no-repeat; } */
+
+/*
+     FILE ARCHIVED ON 12:48:53 Nov 25, 2014 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 11:11:11 May 19, 2017.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/

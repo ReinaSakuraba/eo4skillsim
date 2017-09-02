@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Etrian Odyssey IV Skill Simulator - Help</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="themes/default/style.css" id="theme" />
+<style type="text/css">
+body { background: transparent; }
+</style>
+</head>
+<body>
+
+<div id="help">
+
+<a id="help-top" name="help-top"></a>
+<h2>Etrian Odyssey II Untold Skill Simulator
+	<div class="subtitle">Designed by Zaraf, coded by negzee, updated for EO2U by JuniorTerra</div>
+</h2>
+
+
+<h3>Contents</h3>
+<ul>
+	<li><a href="#help-into">Introduction</a></li>
+	<li><a href="#help-controls">Controls</a></li>
+	<li><a href="#help-trees">Skill Trees</a></li>
+	<li><a href="#help-usage">Using the Skill Simulator</a></li>
+	<li><a href="#help-points">Skill Points</a></li>
+	<li><a href="#help-credits">Special Thanks</a></li>
+	<li><a href="#help-history">Development History</a></li>
+</ul>
+
+<a class="help-top-link" id="help-intro" name="help-intro" href="#help-top">top</a>
+<h3>Introduction</h3>
+
+<p>Welcome to the Etrian Odyssey II Untold Skill Simulator.  This tool is designed to help you plan out the particular skill build you would like to develop your EO2U characters into.  It lets you see the minimum level you would need to gain access to particular skills, or even to help you decide on a distribution of abilities between various characters.  These results can be exported into a text format that you can save for yourself, or even show others easily.</p>
+
+<a class="help-top-link" id="help-controls" name="help-controls" href="#help-top">top</a>
+<h3>Controls</h3>
+
+<p>To get started right away, select the main class you would like for your character. When you select your class, you will notice that the skill tree will automatically change to the corresponding class. When you change the class, any points that have been assigned to any skills before you changed the class will be removed automatically.
+You can set the level to whatever you want, however the level will also automatically increment as you add points to the skills.  The level cap is set as a default to level 70.  Later in the game you will discover ways to increase the level cap, and you can then set the level cap accordingly.  If you wish gain the bonus skill points given to a retired character, you may check the Retired box, and enter in the level at which you wish to retire.  The minimum retiring level is 30, and the maximum is 99.  Retirement bonuses are assumed to be the same as in Etrian Odyssey III, as I personally have not tested them yet in EO2U.</p>
+
+<p>The &#147;Help/About&#148; button will bring you to this window.  The &#147;Clear All&#148; button will erase all points assigned to skills and set the character level back to 1. It will also remove any locked skill info boxes (described in a later section).  The &#147;Switch to Japanese&#148; button will change the English text on each skill box to its Japanese equivalent.  The button will then turn into &#147;Switch to English&#148;, that will reverse this action.  The &#147;Export to Text&#148; button will open a window in which your current build will be displayed in a text format.  Simply click on the &#147;Copy to Clipboard&#148; button to be able to paste the build into any medium you wish.</p>
+
+<a class="help-top-link" id="help-trees" name="help-trees" href="#help-top">top</a>
+<h3>Skill Trees</h3>
+
+<p>Light blue boxes are skills that are currently not accessible because the pre-requisites for those skills have not been met.  Dark blue boxes are those skills that are unlocked as their pre-requisites have been met.  Assigning points to a light colored box will automatically assign the necessary points to its pre-requisites.  In this way, you do not need to assign points all the way up the tree.  You can simply add points to the higher tier skills and automatically have the correct points assigned to all required skills before.  Similarily, if you remove points from a lower tier skill, all skills that it is a pre-requisite for will have their points removed automatically, since their pre-requisites are no longer met.</p>
+
+
+<p>The skill trees are arranged in such a way that the arrows show the relationship between what skills are required to unlock other skills.  The numbers above each arrow represent the required level of the source of the arrow to unlock the target of the arrow.  Small balls (level balls) are placed on skill boxes that represent how many points that skill can be assigned.  </p>
+
+<a class="help-top-link" id="help-ussage" name="help-usage" href="#help-top">top</a>
+<h3>Using the Skill Simulator</h3>
+
+<p>Hovering your cursor over the level balls of a skill that has no points assigned to it will show you how many points that you can assign.  Click once to set the amount of points to that skill.  To clear all points from a skill, simply click on the same level that is assigned to the skill.  If the skill is level 7, click on level 7 again to set the skill to zero.  To assign a new amount of skill points to the same skill, simply click on any level ball amount.  All calculations required to keep track of how many skill points you have are done automatically and are shown at the top as Total and Available.  The Total points value is the running total number of points you have available to use, while Available represents the remaining free skill points that have not been assigned.  If the level cap is reached and the assigned skill points exceeds the amount available, then the available skill points will go into the negative and become red.</p>
+
+<p>If you click on the name of a skill, then it will bring up an info box that contains various data about that particular skill.  Moving your mouse away from the skill box will cause the info box to disappear.  If you wish to lock the box in place, click on the skill name again while the box is open.  This will allow you to click and drag the box to wherever you wish.  Click on the small &#147;x&#148; icon to cause the info box to become unlocked and disappear.</p>
+
+<a class="help-top-link" id="help-points" name="help-points" href="#help-top">top</a>
+<h3>Skill Points</h3>
+
+<p>The skill points totals are determined as follows:</p>
+
+<table id="help-bonuses">
+	<tr>
+		<th class="condition">Condition</th>
+		<th class="points">Skill Points<br>Acquired</th>
+	</tr>
+	<tr><td class="condition">Default</td>              <td class="points">2</td></tr>
+	<tr><td class="condition">Every Level</td>          <td class="points">1</td></tr>
+	<tr><td class="condition">Retire at Level 30-39</td><td class="points">4</td></tr>
+	<tr><td class="condition">Retire at Level 40-49</td><td class="points">5</td></tr>
+	<tr><td class="condition">Retire at Level 50-59</td><td class="points">6</td></tr>
+	<tr><td class="condition">Retire at Level 60-69</td><td class="points">7</td></tr>
+	<tr><td class="condition">Retire at Level 70-98</td><td class="points">8</td></tr>
+	<tr><td class="condition">Retire at Level 99</td>   <td class="points">10</td></tr>
+</table>
+
+<p>The skill points acquired column represents the amount of skill points gained for the various conditions. It should be noted that the skill points acquired by retiring a character are determined only by the most recent retirement of that character; they are not cumulative.</p>
+
+<a class="help-top-link" id="help-credits" name="help-credits" href="#help-top">top</a>
+<h3>Special Thanks</h3>
+
+<p>I would like to extend a special thanks to a few significant contributors to this project:</p>
+<ul>
+	<li><u><b>Etrian Odyssey II Untold Skill Calculator Version thanks:</b></u></li>
+	<li><b>Zaraf and negzee</b> for making the original EO3 Sim.</li>
+    <li><b>DrFetus and Hououin<s>Kyouma</s>Makise</b> for providing skill data.</li>
+</ul>
+
+<a class="help-top-link" id="help-history" name="help-history" href="#help-top">top</a>
+<h3>Development History</h3>
+
+<p>Zaraf had some history doing various projects for games in the Etrian Odyssey series (as well as some others).  He had made dungeon maps for Etrian Odyssey, dungeon maps and class skill trees for Etrian Odyssey II, and dungeon maps and class skill trees for Etrian Odyssey III.  Zaraf had always wanted to do a skill simulator, but not having any experience with JavaScript, he was never able to undertake this sort of a project.  Finally, set on trying to create one, Zaraf looked around the internet for examples of good skill simulators.  He found skill simulators for Ragnarok Online that he liked a lot, but unfortunately the coding was much to complex for him to figure out and try to modify.</p>
+
+<p>Zaraf finally decided to call out to the community and see if there was anyone willing to help out.  This is the point where negzee got involved with the project.  He offered to help out in developing the &#147;secret project&#148; at the time with his JavaScript skills.  Starting May 20, 2010, they both worked on trying to complete the skill simulator as quickly as possible.  While negzee handled all of the JavaScript coding, Zaraf busied himself with compiling all of the required information, laying out the skill trees and just working on the design aspect of the skill simulator itself.  By the end of May, they had both completed the core and all that was left was minor touch ups and some remaining data that needed to be input.  Even though they didn’t spend all that much time on it (just under two weeks), it certainly seemed like a grueling slow pace.  Thankfully it's all done now.  The next big haul will come when the English version of Etrian Odyssey III is released.  Until then, we both hope you find this tool useful and have fun using it!</p>
+
+<div id="help-sig">-Zaraf and negzee and JuniorTerra</div>
+
+
+</div> <!-- #help -->
+
+</body>
+</html>
