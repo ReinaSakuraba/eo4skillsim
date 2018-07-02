@@ -4231,7 +4231,7 @@ Runemaster:{
         RuneofIceFang: {
                 name_jp: "凍牙の印術",
                 name_en: "Glacier Rune",
-                details: "Deals ice damage randomly amongst the enemy party. Has a -9 Speed modifier and 99 Accuracy at all levels.",
+                details: "Deals ice damage randomly amongst the enemy party. Has a -9 Speed modifier and 90 Accuracy at all levels.",
                 requires: "Head",
                 dep: { RuneofIceSpear:2 },
                 active: TRUE,
