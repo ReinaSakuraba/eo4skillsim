@@ -1027,10 +1027,10 @@ Bushi: {
         },
         
         PreemptiveRage: { 
-                1: "25% chance",
-                2: "33% chance",
-                3: "40% chance",
-                4: "50% chance",
+                1: "15% chance",
+                2: "25% chance",
+                3: "33% chance",
+                4: "40% chance",
         },
         
         Calm: { 
